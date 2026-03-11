@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Management & Strategic Advisory Services | CCE</title>
+<meta name="description" content="Explore CCE's full range of project management services including delivery leadership, PMO governance, process optimization, and PM-as-a-Service.">
+<meta property="og:title" content="Project Management & Strategic Advisory Services | CCE">
+<meta property="og:description" content="Explore CCE's full range of project management services including delivery leadership, PMO governance, process optimization, and PM-as-a-Service.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ccebusiness.com/services">
+<link rel="canonical" href="https://ccebusiness.com/services">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0C1F33;
+  --navy-mid: #152E48;
+  --navy-light: #1E4060;
+  --accent: #4A9FE5;
+  --accent-glow: rgba(74,159,229,0.18);
+  --gold: #C9A84C;
+  --ice: #E8F1FA;
+  --light: #F4F7FB;
+  --text: #2A2A2A;
+  --text-mid: #5A6A7E;
+  --text-light: #8A96A6;
+  --white: #FFFFFF;
+  --border: #D8E2EE;
+  --success: #34C77B;
+  --max-w: 1100px;
+  --radius: 12px;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text); line-height: 1.7; font-size: 16px;
+  background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* === NAV === */
+nav {
+  background: rgba(12,31,51,0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  padding: 0 48px; display: flex; align-items: center; justify-content: space-between;
+  height: 72px; position: sticky; top: 0; z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+.nav-logo img { height: 40px; width: auto; }
+.nav-links { display: flex; gap: 4px; }
+.nav-links a {
+  color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  padding: 8px 18px; transition: all 0.25s; border-radius: 8px; letter-spacing: 0.2px;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: var(--white); background: rgba(74,159,229,0.15); }
+.nav-toggle { display: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 16px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 14px 20px; }
+}
+
+/* === SCROLL REVEAL === */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+.reveal-delay-4 { transition-delay: 0.48s; }
+.reveal-delay-5 { transition-delay: 0.6s; }
+
+/* === HERO === */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  filter: brightness(0.45); transform: scale(1.06); transition: transform 10s ease;
+}
+.hero:hover .hero-bg { transform: scale(1.0); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(12,31,51,0.6) 0%, rgba(21,46,72,0.45) 50%, rgba(30,64,96,0.3) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: var(--max-w); margin: 0 auto; padding: 120px 48px 100px; width: 100%; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-eyebrow svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; }
+.hero-eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--accent); border-radius: 2px; }
+.hero h1 {
+  font-family: 'DM Serif Display', Georgia, serif; color: var(--white);
+  font-size: clamp(36px, 5.5vw, 62px); font-weight: 400; line-height: 1.12;
+  margin-bottom: 24px; max-width: 780px;
+  opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero .subtitle {
+  color: rgba(255,255,255,0.6); font-size: 18px; line-height: 1.8; margin-bottom: 44px; max-width: 560px; font-weight: 400;
+  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 768px) { .hero { min-height: 78vh; } .hero-content { padding: 80px 24px 70px; } }
+
+/* Smaller hero variant */
+.hero-sm { min-height: 52vh; }
+.hero-sm .hero-content { padding-top: 90px; padding-bottom: 80px; }
+
+/* === BUTTONS === */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--white);
+  padding: 15px 32px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px;
+  transition: all 0.3s; cursor: pointer; border: none; letter-spacing: 0.3px;
+}
+.btn-primary:hover { background: #3B8DD4; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,159,229,0.3); }
+.btn-primary svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform 0.3s; }
+.btn-primary:hover svg { transform: translateX(3px); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px; background: transparent;
+  color: rgba(255,255,255,0.8); padding: 15px 32px; font-size: 14px; font-weight: 500;
+  text-decoration: none; border-radius: 8px; transition: all 0.3s; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); color: white; border-color: rgba(255,255,255,0.35); }
+.btn-dark {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: var(--white);
+  padding: 14px 30px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px;
+  transition: all 0.3s; cursor: pointer; border: none;
+}
+.btn-dark:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(12,31,51,0.2); }
+.btn-dark svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+/* === CLARITY STRIP === */
+.clarity-strip { background: var(--navy); padding: 48px 48px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.clarity-strip p { max-width: var(--max-w); margin: 0 auto; font-size: 19px; color: rgba(255,255,255,0.8); line-height: 1.85; font-weight: 300; text-align: center; }
+@media (max-width: 768px) { .clarity-strip { padding: 36px 24px; } .clarity-strip p { font-size: 16.5px; } }
+
+/* === SECTIONS === */
+.section { padding: 100px 48px; }
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+.section.light { background: var(--light); }
+.section.white { background: var(--white); }
+.section.dark { background: var(--navy); }
+.section.dark-mid { background: var(--navy-mid); }
+@media (max-width: 768px) { .section { padding: 64px 24px; } }
+
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.section-label::before { content: ''; width: 24px; height: 2px; background: var(--accent); border-radius: 2px; }
+.section.dark .section-label, .section.dark-mid .section-label { color: var(--accent); }
+
+.section h2 {
+  font-family: 'DM Serif Display', Georgia, serif; color: var(--navy);
+  font-size: clamp(28px, 3.8vw, 42px); font-weight: 400; margin-bottom: 20px; line-height: 1.18;
+}
+.section.dark h2, .section.dark-mid h2 { color: var(--white); }
+.section h3 { font-family: 'DM Serif Display', Georgia, serif; color: var(--navy); font-size: 24px; font-weight: 400; margin-bottom: 14px; }
+.section.dark h3 { color: var(--white); }
+.section p { margin-bottom: 18px; line-height: 1.85; color: var(--text-mid); font-size: 16px; }
+.section.dark p, .section.dark-mid p { color: rgba(255,255,255,0.6); }
+.section p:last-child { margin-bottom: 0; }
+.section p strong { color: var(--navy); font-weight: 600; }
+.section.dark p strong { color: var(--white); }
+.lead-text { font-size: 18px; color: var(--text); line-height: 1.85; }
+.section a { color: var(--accent); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.section a:hover { color: #2E7BBF; }
+
+/* === SERVICE DETAIL === */
+.service-detail { max-width: 780px; }
+.service-number { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.service-number svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; }
+
+/* === CTA SECTION === */
+.cta-section {
+  text-align: center; padding: 100px 48px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  position: relative; overflow: hidden;
+}
+.cta-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, var(--accent-glow), transparent 70%); pointer-events: none; animation: pulse 6s ease-in-out infinite; }
+.cta-section::after { content: ''; position: absolute; bottom: -40%; left: -15%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%); pointer-events: none; animation: pulse 8s ease-in-out 2s infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.15); opacity: 1; } }
+.cta-section h2 { font-family: 'DM Serif Display', Georgia, serif; color: var(--white); font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; position: relative; }
+.cta-section p { color: rgba(255,255,255,0.5); font-size: 17px; margin-bottom: 36px; position: relative; }
+.cta-section .btn-primary { position: relative; }
+@media (max-width: 768px) { .cta-section { padding: 72px 24px; } }
+
+/* === FOOTER === */
+footer { background: var(--navy); padding: 48px 48px 36px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-logo img { height: 32px; width: auto; opacity: 0.85; }
+.footer-text { color: rgba(255,255,255,0.3); font-size: 13px; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+/* === FLOATING SHAPES (ambient motion) === */
+.float-shape { position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.04; }
+.float-1 { width: 400px; height: 400px; background: var(--accent); top: 20%; right: -100px; animation: floatA 20s ease-in-out infinite; }
+.float-2 { width: 300px; height: 300px; background: var(--gold); bottom: 10%; left: -80px; animation: floatB 25s ease-in-out infinite; }
+@keyframes floatA { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-30px, 20px) scale(1.1); } }
+@keyframes floatB { 0%, 100% { transform: translate(0,0) scale(1); } 50% { transform: translate(20px, -30px) scale(1.08); } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="Color-logo-w-no-background.png" alt="CCE Business Solutions" />
+  </a>
+  <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SERVICES -->
+<!-- ═══════════════════════════════════════════ -->
+
+<div class="hero hero-sm">
+  <div class="hero-bg" style="background-image:url('https://ccebusiness.com/wp-content/uploads/2020/05/iStock-1209661950-e1758129308222.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content" style="padding-top:90px;padding-bottom:80px;">
+    <div class="hero-eyebrow"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Our Services</div>
+    <h1>Project Management and Advisory Services</h1>
+    <p class="subtitle">Hands-on consulting for organizations navigating complex technical initiatives.</p>
+  </div>
+</div>
+
+<div class="clarity-strip">
+  <p>Each practice area below reflects the kind of engagement we take on most often. If your situation does not fit neatly into one category, that is fine. Most of our work spans more than one.</p>
+</div>
+
+<div class="section white">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 01 / Delivery Leadership</div>
+    <h2>Delivery Leadership</h2>
+    <p class="lead-text">When a program is too important or too complex to manage by committee, it needs a dedicated leader with both the technical depth and the organizational judgment to keep it on track.</p>
+    <p>Clients bring us in when they are running large-scale initiatives (infrastructure overhauls, cloud migrations, enterprise platform deployments) and need someone who can own the delivery end to end. We manage scope, timeline, budget, and risk, but more importantly, we manage the decisions and trade-offs that determine whether a project finishes well or just finishes.</p>
+    <p>After an engagement, our clients typically have a clear delivery framework in place, a stabilized program cadence, and the confidence that their most critical work is being driven by someone who has done this before.</p>
+  </div>
+</div>
+
+<div class="section light">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 02 / Management Consulting</div>
+    <h2>Management Consulting</h2>
+    <p class="lead-text">Not every problem is a project problem. Sometimes organizations face operational or strategic challenges that need to be understood before they can be solved.</p>
+    <p>Misaligned teams, unclear accountability, processes that worked at a smaller scale but are now creating friction. Our consulting engagements are built around diagnosis and practical resolution. We work closely with leadership to identify the root issues, develop a path forward, and help the organization execute on it. We stay engaged until the solution is working.</p>
+  </div>
+</div>
+
+<div class="section white">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 03 / PMO Governance</div>
+    <h2>PMO Governance</h2>
+    <p class="lead-text">Standing up a project management office is one thing. Making it effective is something else entirely.</p>
+    <p>We work with organizations to design, implement, or restructure their PMO so that it serves the business rather than adding overhead. That includes defining governance structures, establishing reporting cadences, aligning the PMO with organizational strategy, and building the discipline needed to sustain it after we leave. We also help teams measure the financial and operational impact of their PMO, so leadership can see the return clearly.</p>
+  </div>
+</div>
+
+<div class="section light">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 04 / PM-as-a-Service</div>
+    <h2>PM-as-a-Service</h2>
+    <p class="lead-text">Experienced project management capacity without a long-term hire.</p>
+    <p>Our PM-as-a-Service model places senior project managers directly inside client teams, embedded in daily operations and accountable to the same milestones. This is not staff augmentation. We bring our own standards, our own discipline, and our own sense of ownership to the role. Clients get the benefit of a seasoned practitioner who integrates quickly, communicates clearly, and delivers results from the start.</p>
+  </div>
+</div>
+
+<div class="section white">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> 05 / Process Optimization</div>
+    <h2>Process Optimization</h2>
+    <p class="lead-text">Processes that worked at one scale often create friction at another. We identify bottlenecks and redesign workflows from business inception through project completion.</p>
+    <p>Our approach covers cross-departmental handoffs, approval chains, reporting structures, and delivery workflows. The goal is always the same: remove what slows teams down without adding complexity they do not need.</p>
+  </div>
+</div>
+
+<div class="section light">
+  <div class="section-inner service-detail reveal">
+    <div class="service-number"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 06 / Project Management Mentoring</div>
+    <h2>Project Management Mentoring</h2>
+    <p>Lasting improvement in project execution comes from building internal capability. Our mentoring programs are designed to strengthen the project management talent inside client organizations, working directly with individuals and teams to develop the skills, habits, and judgment that produce consistent results over time.</p>
+  </div>
+</div>
+
+<div class="section white" style="padding-top:60px;padding-bottom:60px;">
+  <div class="section-inner reveal" style="text-align:center;">
+    <p style="font-size:17px;color:var(--text);">To learn more about the experience behind our work, visit our <a href="about.html">about page</a>. When you are ready to discuss a specific engagement, we are <a href="contact.html">easy to reach</a>.</p>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2 class="reveal">Let's talk about what you're building.</h2>
+  <p class="reveal reveal-delay-1">Whether it's a new program, a stalled initiative, or a PMO that needs direction.</p>
+  <a class="btn-primary reveal reveal-delay-2" href="contact.html">Contact CCE <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="Color-logo-w-no-background.png" alt="CCE Business Solutions" /></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-text">&copy; 2026 CCE Business Solutions. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+function observeReveals() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+
+observeReveals();
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('visible');
+  });
+});
+</script>
+</body>
+</html>

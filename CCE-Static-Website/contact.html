@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact CCE | Project Management Consulting</title>
+<meta name="description" content="Contact CCE Business Solutions to discuss your project management needs, consulting services, and delivery leadership requirements.">
+<meta property="og:title" content="Contact CCE | Project Management Consulting">
+<meta property="og:description" content="Contact CCE Business Solutions to discuss your project management needs, consulting services, and delivery leadership requirements.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ccebusiness.com/contact">
+<link rel="canonical" href="https://ccebusiness.com/contact">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0C1F33;
+  --navy-mid: #152E48;
+  --navy-light: #1E4060;
+  --accent: #4A9FE5;
+  --accent-glow: rgba(74,159,229,0.18);
+  --gold: #C9A84C;
+  --ice: #E8F1FA;
+  --light: #F4F7FB;
+  --text: #2A2A2A;
+  --text-mid: #5A6A7E;
+  --text-light: #8A96A6;
+  --white: #FFFFFF;
+  --border: #D8E2EE;
+  --success: #34C77B;
+  --max-w: 1100px;
+  --radius: 12px;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text); line-height: 1.7; font-size: 16px;
+  background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* === NAV === */
+nav {
+  background: rgba(12,31,51,0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  padding: 0 48px; display: flex; align-items: center; justify-content: space-between;
+  height: 72px; position: sticky; top: 0; z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+.nav-logo img { height: 40px; width: auto; }
+.nav-links { display: flex; gap: 4px; }
+.nav-links a {
+  color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  padding: 8px 18px; transition: all 0.25s; border-radius: 8px; letter-spacing: 0.2px;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: var(--white); background: rgba(74,159,229,0.15); }
+.nav-toggle { display: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 16px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 14px 20px; }
+}
+
+/* === SCROLL REVEAL === */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+.reveal-delay-4 { transition-delay: 0.48s; }
+.reveal-delay-5 { transition-delay: 0.6s; }
+
+/* === HERO === */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  filter: brightness(0.45); transform: scale(1.06); transition: transform 10s ease;
+}
+.hero:hover .hero-bg { transform: scale(1.0); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(12,31,51,0.6) 0%, rgba(21,46,72,0.45) 50%, rgba(30,64,96,0.3) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: var(--max-w); margin: 0 auto; padding: 120px 48px 100px; width: 100%; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-eyebrow svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; }
+.hero-eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--accent); border-radius: 2px; }
+.hero h1 {
+  font-family: 'DM Serif Display', Georgia, serif; color: var(--white);
+  font-size: clamp(36px, 5.5vw, 62px); font-weight: 400; line-height: 1.12;
+  margin-bottom: 24px; max-width: 780px;
+  opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero .subtitle {
+  color: rgba(255,255,255,0.6); font-size: 18px; line-height: 1.8; margin-bottom: 44px; max-width: 560px; font-weight: 400;
+  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 768px) { .hero { min-height: 78vh; } .hero-content { padding: 80px 24px 70px; } }
+
+/* Smaller hero variant */
+.hero-sm { min-height: 52vh; }
+.hero-sm .hero-content { padding-top: 90px; padding-bottom: 80px; }
+
+/* === BUTTONS === */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--white);
+  padding: 15px 32px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px;
+  transition: all 0.3s; cursor: pointer; border: none; letter-spacing: 0.3px;
+}
+.btn-primary:hover { background: #3B8DD4; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,159,229,0.3); }
+.btn-primary svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform 0.3s; }
+.btn-primary:hover svg { transform: translateX(3px); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px; background: transparent;
+  color: rgba(255,255,255,0.8); padding: 15px 32px; font-size: 14px; font-weight: 500;
+  text-decoration: none; border-radius: 8px; transition: all 0.3s; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); color: white; border-color: rgba(255,255,255,0.35); }
+.btn-dark {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: var(--white);
+  padding: 14px 30px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px;
+  transition: all 0.3s; cursor: pointer; border: none;
+}
+.btn-dark:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(12,31,51,0.2); }
+.btn-dark svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+/* === SECTIONS === */
+.section { padding: 100px 48px; }
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+.section.light { background: var(--light); }
+.section.white { background: var(--white); }
+.section.dark { background: var(--navy); }
+.section.dark-mid { background: var(--navy-mid); }
+@media (max-width: 768px) { .section { padding: 64px 24px; } }
+
+.section h2 {
+  font-family: 'DM Serif Display', Georgia, serif; color: var(--navy);
+  font-size: clamp(28px, 3.8vw, 42px); font-weight: 400; margin-bottom: 20px; line-height: 1.18;
+}
+.section p { margin-bottom: 18px; line-height: 1.85; color: var(--text-mid); font-size: 16px; }
+.section p:last-child { margin-bottom: 0; }
+
+/* === CONTACT === */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+.contact-info-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--ice); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-info-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; }
+.contact-info-item strong { display: block; color: var(--navy); font-size: 14px; margin-bottom: 2px; }
+.contact-info-item span { color: var(--text-mid); font-size: 15px; }
+.contact-form { padding: 32px; background: var(--light); border-radius: var(--radius); border: 1px solid var(--border); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px; letter-spacing: 0.3px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text); background: var(--white); transition: border-color 0.2s; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); background: var(--white); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group button { background: var(--accent); color: white; padding: 14px 32px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s; letter-spacing: 0.3px; width: 100%; }
+.form-group button:hover { background: #3B8DD4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(74,159,229,0.3); }
+.form-success { color: var(--success); font-size: 14px; padding: 12px 16px; background: rgba(52,199,123,0.1); border: 1px solid var(--success); border-radius: 8px; text-align: center; display: none; margin-bottom: 20px; }
+.form-success.show { display: block; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+/* === FOOTER === */
+footer { background: var(--navy); padding: 48px 48px 36px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-logo img { height: 32px; width: auto; opacity: 0.85; }
+.footer-text { color: rgba(255,255,255,0.3); font-size: 13px; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+.nav-breadcrumb { font-size: 14px; color: var(--text-mid); margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+.nav-breadcrumb a { color: var(--accent); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.nav-breadcrumb a:hover { color: #2E7BBF; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="Color-logo-w-no-background.png" alt="CCE Business Solutions" />
+  </a>
+  <div class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CONTACT -->
+<!-- ═══════════════════════════════════════════ -->
+
+<div class="hero hero-sm" style="min-height:45vh;">
+  <div class="hero-bg" style="background-image:url('https://ccebusiness.com/wp-content/uploads/2020/05/CTA-Home.png')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content" style="padding-top:80px;padding-bottom:70px;">
+    <div class="hero-eyebrow"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Get in Touch</div>
+    <h1>Contact CCE Business Solutions</h1>
+    <p class="subtitle">Whether it's a new program, a stalled initiative, or a question about how we work, we'd like to hear from you.</p>
+  </div>
+</div>
+
+<div class="section white">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2>Start a Conversation</h2>
+        <p style="margin-bottom:36px;">Reach out directly or use the contact form. We typically respond within one business day.</p>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div><strong>Eddie Monroe</strong><span>Managing Partner</span></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><strong>Phone</strong><span>832.483.5371</span></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><strong>Email</strong><span>emonroe@ccebusiness.com</span></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-success" id="formSuccess">Thank you for your message. We'll be in touch within one business day.</div>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your project, challenge, or question..."></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="nav-breadcrumb">
+      <a href="index.html">&larr; Back to Home</a> &nbsp;&middot;&nbsp; <a href="services.html">Our Services</a> &nbsp;&middot;&nbsp; <a href="about.html">About CCE</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="Color-logo-w-no-background.png" alt="CCE Business Solutions" /></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-text">&copy; 2026 CCE Business Solutions. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('formSuccess');
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+
+  // Show success message
+  successMsg.classList.add('show');
+
+  // Reset form
+  form.reset();
+
+  // Hide success message after 5 seconds
+  setTimeout(() => {
+    successMsg.classList.remove('show');
+  }, 5000);
+
+  // In a real implementation, this would send data to a backend service
+  console.log('Form submitted:', { name, email, phone, message });
+}
+
+function observeReveals() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+
+observeReveals();
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('visible');
+  });
+});
+</script>
+</body>
+</html>
